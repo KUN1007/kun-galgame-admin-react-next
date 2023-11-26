@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
-import { Theme } from '@radix-ui/themes'
+import { Theme, Flex } from '@radix-ui/themes'
 import { NextThemesProvider } from '@/components/providers/NextThemesProvider'
 import './globals.css'
 import '@radix-ui/themes/styles.css'
 
 import MyApp from '@/components/Button'
+import TopBar from '@/components/top-bar/TopBar'
+import AsideNav from '@/components/aside/AsideNav'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -21,9 +23,14 @@ export default function RootLayout({
       <body>
         <NextThemesProvider attribute="class" defaultTheme="system">
           <Theme>
-            <MyApp />
-            <nav></nav>
-            {children}
+            <Flex direction={'column'}>
+              <TopBar />
+
+              <main>
+                <AsideNav />
+                {children}
+              </main>
+            </Flex>
           </Theme>
         </NextThemesProvider>
       </body>
