@@ -15,7 +15,7 @@ export default function AsideNav() {
 
   return (
     <nav>
-      <Flex gap="3">
+      <Flex direction={'column'}>
         {items.map((item, index) => (
           <Box key={index} width="9" height="9">
             {item}

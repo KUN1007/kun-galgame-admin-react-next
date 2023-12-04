@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Flex } from '@radix-ui/themes'
+import { Flex, Avatar } from '@radix-ui/themes'
 
 export default function UserInfo() {
   return (

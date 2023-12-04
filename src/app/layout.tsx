@@ -27,8 +27,10 @@ export default function RootLayout({
               <TopBar />
 
               <main>
-                <AsideNav />
-                {children}
+                <Flex>
+                  <AsideNav />
+                  {children}
+                </Flex>
               </main>
             </Flex>
           </Theme>
